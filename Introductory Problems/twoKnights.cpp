@@ -29,21 +29,13 @@ void modsub(int &a , int b) {a=((a%MOD)-(b%MOD)+MOD)%MOD;}
 void modmul(int &a , int b) {a=((a%MOD)*(b%MOD))%MOD;}
 
 void solve(){
-	int n,num=1;
-	cin>>n;
-	if(n==1){
-		cout<<1<<endl;
-		return;
-	}
-	if(n<4){
-		cout<<"NO SOLUTION"<<endl;
-		return;
-	}
-	for(int i=2;i<=n;i+=2){
-		cout<<i<<" ";
-	}
-	for(int i=1;i<=n;i+=2){
-		cout<<i<<" ";
+	int k;
+	cin>>k;
+	for(int i=1;i<=k;i++){
+		if(i==1) cout<<0<<'\n';
+		else{
+			cout<<(i*i*(i*i-1))/2 - 4*((i-1)*(i-2))<<"\n";
+		}
 	}
 }
 
